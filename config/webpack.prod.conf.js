@@ -1,21 +1,20 @@
-'use strict'
 const merge = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.base.conf');
 
 const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const baseWebpackConfig = require('./webpack.base.conf');
 
 
 module.exports = merge(baseWebpackConfig, {
   // 模式
-  mode: "production",
+  mode: 'production',
   // 调试工具
   devtool: '#source-map',
   // 输出
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: "js/[name].[chunkhash].js",
+    filename: 'js/[name].[chunkhash].js',
   },
   // 插件
   plugins: [
@@ -26,7 +25,7 @@ module.exports = merge(baseWebpackConfig, {
   optimization: {
     nodeEnv: 'production',
     runtimeChunk: {
-      name: 'manifest'
+      name: 'manifest',
     },
     splitChunks: {
       minSize: 30000,
@@ -39,8 +38,8 @@ module.exports = merge(baseWebpackConfig, {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
           chunks: 'initial',
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });
