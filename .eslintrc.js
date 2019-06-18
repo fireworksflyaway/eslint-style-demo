@@ -76,12 +76,16 @@ module.exports = {
         "import/no-extraneous-dependencies": 0,
         // 引用时候根据根目录基础
         "import/no-unresolved": 0,
- 
+        
+        // 关闭解构赋值报错
+        "react/destructuring-assignment": 0,            
         // 允许在 .js 和 .jsx 文件中使用  jsx
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         // jsx > 紧跟着属性
         "react/jsx-closing-bracket-location": [1, "after-props"],
         // 不区分是否是 无状态组件
-        "react/prefer-stateless-function": 0
+        "react/prefer-stateless-function": 0,
+        // prop-types忽略children属性
+        "react/prop-types": [1, { ignore: "children"}]
     }
 };
