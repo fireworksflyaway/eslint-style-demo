@@ -127,7 +127,8 @@ module.exports = {
         "no-use-before-define": 0,
         // 允许代码后面空白
         "no-trailing-spaces": 0,
- 
+         // 关闭大括号内的换行符要求
+        "object-curly-newline": 0,
  
         // 有一些 event 的时候，不需要 role 属性，不需要其他解释
         "jsx-a11y/no-static-element-interactions":0,
