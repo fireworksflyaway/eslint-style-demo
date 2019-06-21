@@ -151,7 +151,11 @@ module.exports = {
         // 不区分是否是 无状态组件
         "react/prefer-stateless-function": 0,
         // prop-types忽略children属性
-        "react/prop-types": [1, { ignore: ["children"]}]
+        "react/prop-types": [1, { ignore: ["children"]}],
+        // 关闭禁止prop-types类型
+        "react/forbid-prop-types": 0,
+        // 关闭default-props检查
+        "react/require-default-props":0
     }
 };
 ```
